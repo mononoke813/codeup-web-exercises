@@ -49,13 +49,13 @@ Finally, commit the changes to your git repository, and push to GitHub.*/
 
 // Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook,they pay you a different rate per hour.
 // Google pays $400,
-let googlePay = prompt(`How much do you want to pay per hour, Google?`);
+let googlePay = prompt(`How much will Google pay per hour?`);
 alert(`Payment will be: $${googlePay}/hour.`);
 // Amazon $380, and
-let amazonPay = prompt(`How much do you want to pay per hour, Amazon?`);
+let amazonPay = prompt(`How much will Amazon pay per hour?`);
 alert(`Payment will be: $${amazonPay}/hour.`);
 // Facebook $350.
-let facebookPay = prompt(`How much do you want to pay per hour, Facebook?`);
+let facebookPay = prompt(`How much will Facebook pay per hour?`);
 alert(`Payment will be: $${facebookPay}/hour.`);
 
 // You worked 10 hours for Facebook,
@@ -71,7 +71,7 @@ alert(`You worked ${hoursWorkAmazon} hours.`);
 // How much will you receive in payment for this week?
 let paymentFacebook = facebookPay*hoursWorkFacebook;
 let paymentGoogle = googlePay*hoursWorkGoogle;
-let paymentAmazon = amazonPay*hoursWorkAmazon;
+let paymentAmazon = parseFloat(amazonPay*hoursWorkAmazon);
 
 let totalPayWeek = paymentAmazon + paymentGoogle + paymentFacebook;
 alert(`You will be paid: $${totalPayWeek} in total this week.`);
