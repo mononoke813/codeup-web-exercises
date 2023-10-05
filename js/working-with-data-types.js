@@ -148,21 +148,22 @@ if they're going to like it). If price for a movie per day is $3,
 how much will you have to pay?
  */
 
-let movieCost = 3;
+let movieCost = 3; // using "const" might be a better choice than "let" bc these num will not change/will not need reassigning
 let lilMer = 3;
-let broB = 5;
+let broB = 5; //adding a variable that individually finds the product of the movie*days rented in case customer wants to know total price
 let herc = 1;
-let days = lilMer + broB + herc;
+let days = lilMer + broB + herc;// one way to add $: totalCost = `$${totalCost.toFixed(2)}; **instructor notes
+//totalCost = totalCost.toLocaleString("en-US", {style: "currency", currency: "USD"});
 
 console.log(movieCost*days);
 
 /*Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate per hour. Google pays $400, Amazon $380, and Facebook $350. How much will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.*/
 
-let goo = 400;
+let goo = 400; //make const
 let zon = 380;
 let face = 350;
-let week = 10*face + 6*goo + 4*zon;
-console.log(week);
+let week = 10*face + 6*goo + 4*zon; // make individual equation for each
+console.log(week); //tie them all together in another equation here
 
 
 
@@ -174,15 +175,16 @@ let passLong = password.length;
 
 let passMin = passLong >= 5;
 console.log(passMin);
-let notSame = password.includes(username);
+let notSame = !password.toLowerCase().includes(username.toLowerCase()); //change to .toLowerCase to check bc C or c could be used
 console.log(notSame);
 let nameMax = long <= 20;
 console.log(nameMax);
-let nameNoWhite = username.includes(" ");
+let nameNoWhite = username.includes(" "); //username.trim() !== username
 console.log(nameNoWhite);
-let passNoWhite = password.includes(" ");
+let passNoWhite = password.includes(" "); //password.trim() !== password
 console.log(passNoWhite);
 
+//const validPassword = **REFER TO PROF NOTES TO SEE CORRECTED VERSION AND AMAZING AWESOMENESS
 
 
 
