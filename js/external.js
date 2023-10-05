@@ -31,16 +31,19 @@ let costHercules = rentHercules*costPerMovie;
 
 let totalCost = costMermaid + costBear + costHercules;
 
-/*let price = totalCost;
-let newPrice =  ('en-US',
-            {style: 'currency',
-            currency: 'USD',
-            minimumFractionDigits: 3, //not working but don't know why....yet is it bc the problem is not a num value?
-            }).format(price);
-let numberWithDollar = price.toLocaleString("en-US",
-    newPrice);*/
 
-alert(`The total cost will be: $${totalCost}.`);
+function formatCostWithCurrency() {
+let costFormat = {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 2,
+            }
+let dollarCost = new Intl.NumberFormat("en-US", costFormat);
+totalCost = dollarCost.format(totalCost);
+}
+formatCostWithCurrency();
+
+alert(`The total cost will be: ${totalCost}.`);
 
 /* Complete exercise 3 from the previous lesson, but write your code in the external.js file instead of in the console.
 When the exercise asks you to use a number, instead use a prompt to ask the user for that number.
@@ -71,7 +74,7 @@ alert(`You worked ${hoursWorkAmazon} hours.`);
 // How much will you receive in payment for this week?
 let paymentFacebook = facebookPay*hoursWorkFacebook;
 let paymentGoogle = googlePay*hoursWorkGoogle;
-let paymentAmazon = parseFloat(amazonPay*hoursWorkAmazon);
+let paymentAmazon = parseFloat(amazonPay*hoursWorkAmazon); //parseFloat bc payment could be 2 after decimal
 
 let totalPayWeek = paymentAmazon + paymentGoogle + paymentFacebook;
 alert(`You will be paid: $${totalPayWeek} in total this week.`);
