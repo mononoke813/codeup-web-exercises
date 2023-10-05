@@ -191,6 +191,17 @@ remember to make variables (SHOW YOUR WORK)
 use Google to search for easier ways/other methods not shown in class - i.e. LEARN
  */
 
+//Alert
+
+//Confirm
+
+//Prompt
+//let showMeTheMoney = prompt("Where is my money?"); //prompt with text box
+
+//alert(`Your answer: ${showMeTheMoney}`); //pop up with notice of what their answer was...
+
+//Exercies
+
 
 
 
