@@ -186,6 +186,10 @@ console.log(passNoWhite);
 
 //const validPassword = **REFER TO PROF NOTES TO SEE CORRECTED VERSION AND AMAZING AWESOMENESS
 
+/* consider the "EASY PATH",
+remember to make variables (SHOW YOUR WORK)
+use Google to search for easier ways/other methods not shown in class - i.e. LEARN
+ */
 
 
 
