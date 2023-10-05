@@ -74,7 +74,7 @@ alert(`You worked ${hoursWorkAmazon} hours.`);
 // How much will you receive in payment for this week?
 let paymentFacebook = facebookPay*hoursWorkFacebook;
 let paymentGoogle = googlePay*hoursWorkGoogle;
-let paymentAmazon = parseFloat(amazonPay*hoursWorkAmazon); //parseFloat bc payment could be 2 after decimal
+let paymentAmazon = amazonPay*hoursWorkAmazon; //parseFloat bc payment could be 2 after decimal
 
 let totalPayWeek = paymentAmazon + paymentGoogle + paymentFacebook;
 
