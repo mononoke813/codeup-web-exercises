@@ -77,4 +77,16 @@ let paymentGoogle = googlePay*hoursWorkGoogle;
 let paymentAmazon = parseFloat(amazonPay*hoursWorkAmazon); //parseFloat bc payment could be 2 after decimal
 
 let totalPayWeek = paymentAmazon + paymentGoogle + paymentFacebook;
-alert(`You will be paid: $${totalPayWeek} in total this week.`);
+
+function formatPayWithCurrency() {
+    let payFormat = {
+             style: 'currency',
+             currency: 'USD',
+             minimumFractionDigits: 2,
+             }
+             let dollarPay = new Intl.NumberFormat("en-US", payFormat);
+ totalPay = dollarPay.format(totalPayWeek);
+}
+formatPayWithCurrency();
+
+alert(`You will be paid: ${totalPay} in total this week.`);
