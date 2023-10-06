@@ -39,7 +39,7 @@ console.log(helloMessage);
 const myName = "Lauren";
 
 const newMessage = sayHello(myName);
-console.log(newMessage);
+console.log(newMessage); //console.log(sayHello(myName)); is an alternate way to write - FLEX
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -61,10 +61,8 @@ const random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-
-
-const isTwo = (random) => {
-   return random === 2;
+const isTwo = (num) => {
+   return num === 2;
 };
 
 const soIsTwo = isTwo(random);
@@ -88,8 +86,14 @@ const billTotal = 100;
 const tipPercent = 10;
 
 const calculateTip = (billTotal,tipPercent) => {
-     return billTotal * (tipPercent/100);
+    return billTotal * (tipPercent / 100);
 };
+
+const total = calculateTip(0.2, 20);
+const total2 = calculateTip(.25, 25.5);
+console.log(total);
+console.log(total2);
+
 const final = calculateTip(billTotal,tipPercent);
 console.log(final);
 
@@ -100,8 +104,8 @@ console.log(final);
  * then display the dollar amount they should tip
  */
 let billAmount = prompt(`What is the total bill amount?`);
-let tipAmount = prompt(`How much of a tip do you want to leave (as a percentage)?`);
-alert(`Your tip amount will be: $${billAmount*(tipAmount/100)}.`);
+let tipAmount = prompt(`How much of a tip do you want to leave? (input as whole number)`);
+alert(`Your tip amount will be: $${(billAmount*(tipAmount/100)).toFixed(2)}.`); //.toFixed(2) goes HERE
 
 /**
  * TODO:
@@ -120,8 +124,8 @@ alert(`Your tip amount will be: $${billAmount*(tipAmount/100)}.`);
 const price = 100;
 const discount = 0.3;
 const applyDiscount = (price, discount) => {
-    return price*discount;
+    return price - (price * discount);
 };
 
 const newPrice = applyDiscount(price, discount);
-console.log(newPrice);
+console.log(`$${newPrice}`);
