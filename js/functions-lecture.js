@@ -41,10 +41,27 @@ isCoding("Lauren");*/
 
 const user = "Isaac";
 const preference = " hates coding.";
-const isCoding = (name, statement) => {
+const isCoding = (name, statement) => { //STRUGGLING WITH 2 PARAMETERS****
     return `${name}, ${statement}`;
 };
 
 const whatYouLike = isCoding(user, preference);
 
 console.log(whatYouLike);
+
+
+//SCOPING
+
+const globalVar = "I am global";
+
+const tieFighter = () => {
+    const localVar = "I am local";
+    console.log(globalVar);
+    console.log(localVari);
+};
+console.log(globalVar);
+console.log(localVari); //doesn't show up global
+
+
+
+tieFighter();
