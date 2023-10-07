@@ -177,26 +177,29 @@
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-confirm(`Would you like to enter a number?`);
+
+const message = confirm(`Would you like to enter a number?`);
 
 const userNum = prompt(`Which number?`);
-alert(`Your number is ${userNum}.`);
 
-const addNum = parseInt(userNum) + 100;
-alert(`Your number plus 100 is ${addNum}.`);
 
-if(userNum % 2 === 0) {
-    alert("Your number is even."); //listen, I'm tired and evidently to my tired mind odd/even = pos/neg :p
+if (typeof userNum !== number) {
+    alert(`No silly, I asked for a number...`);
 } else {
-    alert("Your number is odd.");
-}
+    if (typeof userNum === number) {
+        if (userNum % 2 == 0) {
+            alert("Your number is even.");
+        } else {
+            alert("Your number is odd.");
+        }
 
-if(userNum >= 0) {
-    alert("And your number is positive.");
-} else {
-    alert("And your number is negative.");
-}
+        const addNine = userNum + 9;
+        alert(`Your number plus 100 equals to ${addNine}`);
 
-if(typeof userNum === number) {
-    alert("You did not input a number, silly.");
-}
+        if (userNum >= 0) {
+            alert(`And your number is positive!`);
+        } else {
+            alert(`And your number is negative!`);
+        }
+        }
+    }
