@@ -42,8 +42,8 @@
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-const randomColor = colors[Math.floor(Math.random() * colors.length)];
+// let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 /**
  * TODO:
@@ -102,34 +102,45 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-const luckyNumber = Math.floor(Math.random () * 6);
-const discountedPrice = totalAmount*luckyNumber;
-const totalAmount = prompt("What is your purchase total?");
-
-
-const calculateTotal = (luckyNumber, totalAmount) => {
-    if (luckyNumber = 0) {
-        console.log("Sorry. You do not get a discount.");
-
-    } else if (luckyNumber = 1) {
-        console.log("You get a 10% discount!");
-
-    } else if (luckyNumber = 2) {
-        console.log("You get a 25% discount!");
-
-    } else if (luckyNumber = 3) {
-        console.log("You get a 35% discount!");
-
-    }else if (luckyNumber = 4) {
-        console.log("You get a 50% discount!");
-
-    }else {
-        console.log("CONGRATS! YOUR PURCHASE IS FREE!")
-    }
-
-   console.log(discountedPrice);
-}
-
+// const calculateTotal = (luckyNumber, totalAmount) => {
+//     if (luckyNumber === 0) {
+//         let luckyNumber0Discount = 1 - 0
+//         let discountedTotal = totalAmount * luckyNumber0Discount;
+//         return discountedTotal.toFixed(2);
+//
+//     } else if (luckyNumber === 1) {
+//         let luckyNumber1Discount = 1 - .1;
+//         let discountedTotal = totalAmount * luckyNumber1Discount;
+//         return discountedTotal.toFixed(2);
+//
+//     } else if (luckyNumber === 2) {
+//         let luckyNumber2Discount = 1 - .25
+//         let discountedTotal = totalAmount * luckyNumber2Discount;
+//         return discountedTotal.toFixed(2);
+//
+//     } else if (luckyNumber === 3) {
+//         let luckyNumber3Discount = 1 - .35;
+//         let discountedTotal = totalAmount * luckyNumber3Discount;
+//         return discountedTotal.toFixed(2);
+//
+//     } else if (luckyNumber === 4) {
+//         let luckyNumber4Discount = 1 - .5;
+//         let discountedTotal = totalAmount * luckyNumber4Discount;
+//         return discountedTotal.toFixed(2);
+//
+//     } else {
+//         let luckyNumber5Discount = 1 - 1;
+//         let discountedTotal = totalAmount * luckyNumber5Discount;
+//         return discountedTotal.toFixed(2);
+//     }
+// }
+//
+// console.log(calculateTotal(0, 100));
+// console.log(calculateTotal(1, 100));
+// console.log(calculateTotal(2, 100));
+// console.log(calculateTotal(3, 100));
+// console.log(calculateTotal(4, 100));
+// console.log(calculateTotal(5, 100));
 
 /**
  * TODO:
@@ -141,6 +152,13 @@ const calculateTotal = (luckyNumber, totalAmount) => {
  */
 // Generate a random number between 0 and 6
 // const luckyNumber = Math.floor(Math.random() * 6);
+// const customerBill = prompt("What is the total amount of your bill?");
+// let discountedTotal = calculateTotal(luckyNumber, customerBill);
+//
+//
+// alert(`Your lucky number was: ${luckyNumber}`);
+// alert(`Your bill before discount is: $${customerBill}`);
+// alert(`Your bill after discount is: $${discountedTotal}`);
 
 /**
  * TODO:
@@ -156,7 +174,29 @@ const calculateTotal = (luckyNumber, totalAmount) => {
  * if the user enters a value that is not of the number data type.
  * Instead, use an alert to inform them of the incorrect input data type.
  *
- *
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+confirm(`Would you like to enter a number?`);
+
+const userNum = prompt(`Which number?`);
+alert(`Your number is ${userNum}.`);
+
+const addNum = parseInt(userNum) + 100;
+alert(`Your number plus 100 is ${addNum}.`);
+
+if(userNum % 2 === 0) {
+    alert("Your number is even."); //listen, I'm tired and evidently to my tired mind odd/even = pos/neg :p
+} else {
+    alert("Your number is odd.");
+}
+
+if(userNum >= 0) {
+    alert("And your number is positive.");
+} else {
+    alert("And your number is negative.");
+}
+
+if(typeof userNum === number) {
+    alert("You did not input a number, silly.");
+}
