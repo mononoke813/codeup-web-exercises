@@ -15,11 +15,11 @@ isCoding("Lauren");*/
 //sayHello("friend")
 
 //Arrow functions expression ***use this one
-/*const sayHello = (username) => {
+const sayHello = (username) => {
     console.log(`Doing great ${username}`);
 };
 
-sayHello("Jason");*/
+sayHello("Jason");
 
 //declare first, , newer syntax
 /*const isCoding = (name) => {

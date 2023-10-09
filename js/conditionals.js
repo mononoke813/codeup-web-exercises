@@ -181,38 +181,41 @@
 
 const message = confirm(`Would you like to enter a number?`);
 
-if(message === true) {
-    const userAnswer = prompt(`Which number?`);
-    const userNum = parseInt(userAnswer);
-    if(userNum === userNum) {
-        const addHundred = userNum + 100;
 
-        if (userNum % 2 === 0) {
-            alert("Your number is even.");
-        } else if(userNum % 2 !== 0) {
-            alert("Your number is odd.");
-        } if (userNum >= 0) {
-            alert(`And your number is positive!`);
+const numPuzzle = () => {
+    if (message === true) {
+        const userAnswer = prompt(`Which number?`);
+        const userNum = parseInt(userAnswer);
+        if (userNum === userNum) {
+            const addHundred = userNum + 100;
+
+            if (userNum % 2 === 0) {
+                alert("Your number is even.");
+            } else if (userNum % 2 !== 0) {
+                alert("Your number is odd.");
+            }
+            if (userNum >= 0) {
+                alert(`And your number is positive!`);
+            } else {
+                alert(`And your number is negative!`);
+            }
+
+            alert(`Your number plus 100 equals to ${addHundred}`);
+
         } else {
-            alert(`And your number is negative!`);
+            alert(`You did not input a number.`);
         }
 
-        alert(`Your number plus 100 equals to ${addHundred}`);
-
     } else {
-        alert(`You did not input a number.`);
+        alert(`You did not enter a number.`);
     }
 
-} else {
-    alert(`You did not enter a number.`);
 }
 
+numPuzzle();
+numPuzzle();
+numPuzzle();
+numPuzzle();
+numPuzzle();
 
 
-
-
-
-// } else {
-//     if(message = "") {
-//
-//}
