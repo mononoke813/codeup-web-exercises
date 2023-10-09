@@ -180,24 +180,29 @@
 
 const message = confirm(`Would you like to enter a number?`);
 
-const userNum = prompt(`Which number?`);
+const answer = prompt(`Which number?`);
+
+const userNum = isNaN(parseInt(answer));
 
 
-typeof userNum !== number
-    alert(`No silly, I asked for a number...`);
-
-typeof userNum === number
         if (userNum % 2 == 0) {
             alert("Your number is even.");
         } else {
             alert("Your number is odd.");
         }
 
-        const addNine = userNum + 9;
-        alert(`Your number plus 100 equals to ${addNine}`);
+        const addHundred = userNum + 100;
+        alert(`Your number plus 100 equals to ${addHundred}`);
 
         if (userNum >= 0) {
             alert(`And your number is positive!`);
         } else {
             alert(`And your number is negative!`);
         }
+
+
+        //alert(`That was not a number.`);
+
+
+
+    //const number = parseInt(userNum);
