@@ -200,7 +200,7 @@ use Google to search for easier ways/other methods not shown in class - i.e. LEA
 
 //alert(`Your answer: ${showMeTheMoney}`); //pop up with notice of what their answer was...
 
-//Exercies
+//Exercises from Data Types
 
 
 
