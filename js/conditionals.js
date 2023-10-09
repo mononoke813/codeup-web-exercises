@@ -183,10 +183,10 @@ const message = confirm(`Would you like to enter a number?`);
 const userNum = prompt(`Which number?`);
 
 
-if (typeof userNum !== number) {
+typeof userNum !== number
     alert(`No silly, I asked for a number...`);
-} else {
-    if (typeof userNum === number) {
+
+typeof userNum === number
         if (userNum % 2 == 0) {
             alert("Your number is even.");
         } else {
@@ -201,5 +201,3 @@ if (typeof userNum !== number) {
         } else {
             alert(`And your number is negative!`);
         }
-        }
-    }
