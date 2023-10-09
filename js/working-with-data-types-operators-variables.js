@@ -166,7 +166,7 @@ let week = 10*face + 6*goo + 4*zon; // make individual equation for each
 console.log(week); //tie them all together in another equation here
 
 
-
+/*
 let username = 'codeup';
 let password = 'notastrongpassword';
 
@@ -183,8 +183,57 @@ let nameNoWhite = username.includes(" "); //username.trim() !== username
 console.log(nameNoWhite);
 let passNoWhite = password.includes(" "); //password.trim() !== password
 console.log(passNoWhite);
+*/
+
 
 //const validPassword = **REFER TO PROF NOTES TO SEE CORRECTED VERSION AND AMAZING AWESOMENESS
+// Use the following code to follow the instructions below:
+    let username = 'codeup';
+let password = 'notastrongpassword';
+
+// Create a variable that holds a boolean value for each of the following conditions:
+//     the password must be at least 5 characters
+const passChar = password.length;
+
+if (passChar >= 5) {
+    console.log(true);
+} else {
+    console.log(false);
+}
+
+// the password must not include the username
+const passNoUsername = !password.toLowerCase().includes(username);
+console.log(passNoUsername);
+
+// the username must be no more than 20 characters
+const user20Char = username.length;
+if(user20Char <= 20) {
+    console.log(true);
+} else {
+    console.log(false);
+}
+
+// neither the username or password can start or end with whitespace
+const userNoWhiteSpace = !username.includes(" ");
+console.log(userNoWhiteSpace);
+const passNoWhiteSpace = !password.includes(" ");
+console.log(passNoWhiteSpace);
+
+const userFacts = (user20Char && userNoWhiteSpace);
+const passFacts = (passChar && passNoUsername && passNoWhiteSpace);
+
+if(userFacts === true) {
+    console.log("Username is good to go.");
+} else {
+    console.log("Username has an issue.");
+}
+
+if(passFacts === true) {
+    console.log("Password is good to go.");
+} else {
+    console.log("Password has an issue.");
+}
+
 
 /* consider the "EASY PATH",
 remember to make variables (SHOW YOUR WORK)
