@@ -222,11 +222,10 @@ const message = confirm(`Would you like to enter a number?`);
 
 
 const numPuzzle = () => {
-    if (message === true) {
+    if (message) {
         const userAnswer = prompt(`Which number?`);
         const userNum = Math.floor(userAnswer);
         if (userNum === userNum) {
-            const addHundred = userNum + 100;
 
             if (userNum % 2 === 0) {
                 alert("Your number is even.");
@@ -239,6 +238,7 @@ const numPuzzle = () => {
                 alert(`And your number is negative!`);
             }
 
+            const addHundred = userNum + 100;
             alert(`Your number plus 100 equals to ${addHundred}`);
 
         } else {
