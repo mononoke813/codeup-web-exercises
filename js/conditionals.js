@@ -21,6 +21,9 @@
 //  * Test your function by passing various string literals to it and
 //  * console.logging the function's return value
 //  */
+
+
+/*
 const colorName = prompt("What is your color preference?");
 
 const analyzeColor = (colorName) => {
@@ -36,51 +39,76 @@ const analyzeColor = (colorName) => {
 }
 const userColor = analyzeColor(colorName);
 console.log(userColor);
+
+const userColor2 = analyzeColor("blue");
+console.log(userColor2);
+
+analyzeColor("red");
+console.log(analyzeColor("red"));
+
+*/
+
+
 //
-// // Don't change the next two lines!
-// // These lines create two variables for you:
-// // - `colors`: a list of the colors of the rainbow
-// // - `randomColor`: contains a single random color value from the list (this
-// //                  will contain a different color every time the page loads)
-// // let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-// // const randomColor = colors[Math.floor(Math.random() * colors.length)];
-//
+// Don't change the next two lines!
+// These lines create two variables for you:
+// - `colors`: a list of the colors of the rainbow
+// - `randomColor`: contains a single random color value from the list (this
+//                  will contain a different color every time the page loads)
+let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
 // /**
 //  * TODO:
 //  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
 //  * You should see a different message every time you refresh the page
 //  */
-// // const randomColorGenerator = analyzeColor(randomColor);
-// // console.log(randomColorGenerator);
+
+
+// const randomColorGenerator = analyzeColor(randomColor);
+// console.log(randomColorGenerator);
+
+
 //
 // /**
 //  * TODO:
 //  * Comment out the code above, and refactor your function to use a switch-case statement
 //  */
-// // switch (randomColor) {
-// //     case "blue":
-// //         console.log("Blue is so soothing.");
-// //         break;
-// //     case "red":
-// //         console.log("Red means stop!");
-// //         break;
-// //     case "yellow":
-// //         console.log("Yellow is so happy.");
-// //         break;
-// //     default:
-// //         console.log("...but colors are so cool.");
-// // }
+
+/*
+switch (randomColor) {
+    case "blue":
+        console.log("Blue is so soothing.");
+        break;
+    case "red":
+        console.log("Red means stop!");
+        break;
+    case "yellow":
+        console.log("Yellow is so happy.");
+        break;
+    default:
+        console.log("...but colors are so cool.");
+}
+
+*/
+
+
 // /**
 //  * TODO:
 //  * Prompt the user for a color when the page loads, and pass the input from the
 //  * user to your `analyzeColor` function. Alert the return value from your
 //  * function to show it to the user.
 //  */
-// // let favoriteColor = prompt("What's your favorite color?");
-// //
-// // analyzeColor(favoriteColor);
-// //
-// // alert(`You chose ${favoriteColor}! Nice.`);
+
+/*
+let favoriteColor = prompt("What's your favorite color?");
+
+analyzeColor(favoriteColor);
+
+alert(`You chose ${favoriteColor}! Nice.`);
+*/
+
+
 // /* ########################################################################## */
 //
 // /**
@@ -102,6 +130,9 @@ console.log(userColor);
 //  * Test your function by passing it various values and checking for the expected
 //  * return value.
 //  */
+
+
+/*
 const calculateTotal = (luckyNumber, totalAmount) => {
     if (luckyNumber === 0) {
         let luckyNumber0Discount = 1 - 0;
@@ -139,8 +170,11 @@ console.log(calculateTotal(0, 100));
 console.log(calculateTotal(1, 100));
 console.log(calculateTotal(2, 100));
 console.log(calculateTotal(3, 100));
-// // console.log(calculateTotal(4, 100));
-// // console.log(calculateTotal(5, 100));
+console.log(calculateTotal(4, 100));
+console.log(calculateTotal(5, 100));
+*/
+
+
 //
 // /**
 //  * TODO:
@@ -151,7 +185,9 @@ console.log(calculateTotal(3, 100));
 //  * price before the discount was, and what their price after the discount is.
 //  */
 // Generate a random number between 0 and 6
-const luckyNumber = Math.floor(Math.random() * 6);
+
+
+/*const luckyNumber = Math.floor(Math.random() * 6);
 const customerBill = prompt("What is the total amount of your bill?");
 let discountedTotal = calculateTotal(luckyNumber, customerBill);
 
@@ -159,7 +195,9 @@ let discountedTotal = calculateTotal(luckyNumber, customerBill);
 
 alert(`Your lucky number was: ${luckyNumber}`);
 alert(`Your bill before discount is: $${customerBill}`);
-alert(`Your bill after discount is: $${discountedTotal}`);
+alert(`Your bill after discount is: ${discountedTotal}`);
+*/
+
 
 // /**
 //  * TODO:
@@ -186,7 +224,7 @@ const message = confirm(`Would you like to enter a number?`);
 const numPuzzle = () => {
     if (message === true) {
         const userAnswer = prompt(`Which number?`);
-        const userNum = parseInt(userAnswer);
+        const userNum = Math.floor(userAnswer);
         if (userNum === userNum) {
             const addHundred = userNum + 100;
 
