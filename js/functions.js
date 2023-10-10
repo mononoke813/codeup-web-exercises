@@ -17,6 +17,7 @@
 //  const sayThis = sayHello(name);
 //  console.log(sayThis);
 
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -29,6 +30,7 @@
 //
 // const helloMessage = sayHello(`Lauren`);
 // console.log(helloMessage);
+
 
 /**
  * TODO:
@@ -44,6 +46,7 @@
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 const random = Math.floor((Math.random() * 3) + 1);
+
 
 /**
  * TODO:
@@ -67,8 +70,6 @@ const random = Math.floor((Math.random() * 3) + 1);
 //
 // const soIsTwo = isTwo(random);
 // console.log(soIsTwo);
-
-
 
 
 /**
@@ -97,6 +98,7 @@ const random = Math.floor((Math.random() * 3) + 1);
 // const final = calculateTip(billTotal,tipPercent);
 // console.log(final);
 
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
@@ -106,6 +108,7 @@ const random = Math.floor((Math.random() * 3) + 1);
 // let billAmount = prompt(`What is the total bill amount?`);
 // let tipAmount = prompt(`How much of a tip do you want to leave? (input as whole number)`);
 // alert(`Your tip amount will be: $${(billAmount*(tipAmount/100)).toFixed(2)}.`); //.toFixed(2) goes HERE
+
 
 /**
  * TODO:

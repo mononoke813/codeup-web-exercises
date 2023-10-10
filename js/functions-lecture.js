@@ -1,3 +1,36 @@
+/* 10/10 Functions Review Notes
+
+#1. They're named contextually and appropriately
+#2. Functions declared at the top of the file (no hoisting - "hoist the colors"
+#3. Feed functions by passing arguments, not by global variables (cannot move functions to other files if global var dependent)
+#4. Build and return; functions should not be opinionated on what you do with the result, just return it
+#5. Validate and return early (i.e. using conditionals to test and console.log)
+ */
+
+/*
+//context and proper name
+const getUsername = (id) {
+    //validate
+    if(!id) {
+        return false;
+    }
+    //build result
+    let result;
+    const url = `https://...${id}}`;
+    //...
+
+    //return result
+    return result;
+}
+*/
+
+
+//falsy = null, NaN, undefined, 0, empty sting
+
+
+
+
+
 //function declaration
 //function isCoding(name) { // inside the () is a parameter - NOT an argument
  //   console.log(`${name} loves coding!`);

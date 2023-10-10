@@ -102,43 +102,43 @@
 //  * Test your function by passing it various values and checking for the expected
 //  * return value.
 //  */
-// // const calculateTotal = (luckyNumber, totalAmount) => {
-// //     if (luckyNumber === 0) {
-// //         let luckyNumber0Discount = 1 - 0
-// //         let discountedTotal = totalAmount * luckyNumber0Discount;
-// //         return discountedTotal.toFixed(2);
+const calculateTotal = (luckyNumber, totalAmount) => {
+    if (luckyNumber === 0) {
+        let luckyNumber0Discount = 1 - 0;
+        let discountedTotal = totalAmount * luckyNumber0Discount;
+        return discountedTotal.toLocaleString("en-US", {style: "currency", currency: "USD"});
+
+    } else if (luckyNumber === 1) {
+        let luckyNumber1Discount = 1 - .1;
+        let discountedTotal = totalAmount * luckyNumber1Discount;
+        return discountedTotal.toLocaleString("en-US", {style: "currency", currency: "USD"});
+
+    } else if (luckyNumber === 2) {
+        let luckyNumber2Discount = 1 - .25;
+        let discountedTotal = totalAmount * luckyNumber2Discount;
+        return discountedTotal.toLocaleString("en-US", {style: "currency", currency: "USD"});
+
+    } else if (luckyNumber === 3) {
+        let luckyNumber3Discount = 1 - .35;
+        let discountedTotal = totalAmount * luckyNumber3Discount;
+        return discountedTotal.toLocaleString("en-US", {style: "currency", currency: "USD"});
+
+    } else if (luckyNumber === 4) {
+        let luckyNumber4Discount = 1 - .5;
+        let discountedTotal = totalAmount * luckyNumber4Discount;
+        return discountedTotal.toLocaleString("en-US", {style: "currency", currency: "USD"});
+
+    } else {
+        let luckyNumber5Discount = 1 - 1;
+        let discountedTotal = totalAmount * luckyNumber5Discount;
+        return discountedTotal.toLocaleString("en-US", {style: "currency", currency: "USD"});
+    }
+}
 // //
-// //     } else if (luckyNumber === 1) {
-// //         let luckyNumber1Discount = 1 - .1;
-// //         let discountedTotal = totalAmount * luckyNumber1Discount;
-// //         return discountedTotal.toFixed(2);
-// //
-// //     } else if (luckyNumber === 2) {
-// //         let luckyNumber2Discount = 1 - .25
-// //         let discountedTotal = totalAmount * luckyNumber2Discount;
-// //         return discountedTotal.toFixed(2);
-// //
-// //     } else if (luckyNumber === 3) {
-// //         let luckyNumber3Discount = 1 - .35;
-// //         let discountedTotal = totalAmount * luckyNumber3Discount;
-// //         return discountedTotal.toFixed(2);
-// //
-// //     } else if (luckyNumber === 4) {
-// //         let luckyNumber4Discount = 1 - .5;
-// //         let discountedTotal = totalAmount * luckyNumber4Discount;
-// //         return discountedTotal.toFixed(2);
-// //
-// //     } else {
-// //         let luckyNumber5Discount = 1 - 1;
-// //         let discountedTotal = totalAmount * luckyNumber5Discount;
-// //         return discountedTotal.toFixed(2);
-// //     }
-// // }
-// //
-// // console.log(calculateTotal(0, 100));
-// // console.log(calculateTotal(1, 100));
-// // console.log(calculateTotal(2, 100));
-// // console.log(calculateTotal(3, 100));
+console.log(calculateTotal(0, 100));
+console.log(calculateTotal(1, 100));
+console.log(calculateTotal(2, 100));
+console.log(calculateTotal(3, 100));
 // // console.log(calculateTotal(4, 100));
 // // console.log(calculateTotal(5, 100));
 //
@@ -150,16 +150,17 @@
 //  * and alerts to display to the user what their lucky number was, what their
 //  * price before the discount was, and what their price after the discount is.
 //  */
-// // Generate a random number between 0 and 6
-// // const luckyNumber = Math.floor(Math.random() * 6);
-// // const customerBill = prompt("What is the total amount of your bill?");
-// // let discountedTotal = calculateTotal(luckyNumber, customerBill);
-// //
-// //
-// // alert(`Your lucky number was: ${luckyNumber}`);
-// // alert(`Your bill before discount is: $${customerBill}`);
-// // alert(`Your bill after discount is: $${discountedTotal}`);
-//
+// Generate a random number between 0 and 6
+const luckyNumber = Math.floor(Math.random() * 6);
+const customerBill = prompt("What is the total amount of your bill?");
+let discountedTotal = calculateTotal(luckyNumber, customerBill);
+
+
+
+alert(`Your lucky number was: ${luckyNumber}`);
+alert(`Your bill before discount is: $${customerBill}`);
+alert(`Your bill after discount is: $${discountedTotal}`);
+
 // /**
 //  * TODO:
 //  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -213,9 +214,6 @@ const numPuzzle = () => {
 }
 
 numPuzzle();
-numPuzzle();
-numPuzzle();
-numPuzzle();
-numPuzzle();
+
 
 
