@@ -21,21 +21,21 @@
 //  * Test your function by passing various string literals to it and
 //  * console.logging the function's return value
 //  */
-// // const colorName = prompt("What is your color preference?");
-// //
-// // const analyzeColor = (colorName) => {
-// //     if (colorName === "blue") {
-// //        return ("I love blue too!");
-// //     } else if (colorName === "red") {
-// //         return ("Red is a color of passion.");
-// //     } else if (colorName === "yellow") {
-// //         return ("Shine your warmth like the sun.");
-// //     } else {
-// //         return ("Well aren't you dower.");
-// //     }
-// // }
-// // const userColor = analyzeColor(colorName);
-// // console.log(userColor);
+const colorName = prompt("What is your color preference?");
+
+const analyzeColor = (colorName) => {
+    if (colorName === "blue") {
+       return ("I love blue too!");
+    } else if (colorName === "red") {
+        return ("Red is a color of passion.");
+    } else if (colorName === "yellow") {
+        return ("Shine your warmth like the sun.");
+    } else {
+        return ("Well aren't you dour.");
+    }
+}
+const userColor = analyzeColor(colorName);
+console.log(userColor);
 //
 // // Don't change the next two lines!
 // // These lines create two variables for you:
