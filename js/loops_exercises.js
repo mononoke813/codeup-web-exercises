@@ -118,7 +118,6 @@ numberPyramid(9);
 // 15
 // 10
 // 5
-// Break and Continue
 
 const countDownBy5 = (num) => {
     for(let i = num; i > 0; i-=5) {
@@ -127,6 +126,7 @@ const countDownBy5 = (num) => {
 }
 
 
+// Break and Continue
 // Create a file named break_and_continue.js in the js directory.
 //     Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input.
 //     Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
@@ -159,6 +159,14 @@ const countDownBy5 = (num) => {
 // Here is an odd number: 45
 // Here is an odd number: 47
 // Here is an odd number: 49
+//
+
+
+
+
+
+
+//
 // While Loops
 //
 // Create a file named while.js in the js directory.
@@ -180,28 +188,35 @@ const countDownBy5 = (num) => {
 // 32768
 // 65536
 // Do While Loop
-//
+
+
+
+
+
+
+
+
 // An ice cream seller can't go home until she sells all of her cones. First write enough code that generates a random number between 50 and 100 representing the amount of cones to sell before you start your loop. Inside of the loop your code should generate another random number between 1 and 5, simulating the amount of cones being bought by her clients. Use a do-while loop to log to the console the amount of cones sold to each person. The below code shows how to get the random numbers for this exercise.
 
 let totalCones = Math.floor(Math.random() * 50) + 50;
 console.log(`I have ${totalCones} to sell today.`);
 do {
-    let conesBought = Math.floor(Math.random() * 5) + 1;
+    let conesBought = Math.floor(Math.random() * 5);
     conesBought++;
-    console.log(`The customer is purchasing ${conesBought} cones.`);
-    totalCones = totalCones - conesBought;
+    console.log(`${totalCones} cones left...`);
 
-    if (totalCones > conesBought) {
-        let whatCustomerIsTryingToBuy = `${totalCones} cones left...`
-        console.log(whatCustomerIsTryingToBuy);
 
-    } else if(totalCones > conesBought) {
+    if (totalCones >= conesBought) {
+        console.log(`The customer is purchasing ${conesBought} cones.`);
+        totalCones = totalCones - conesBought;
+    } else {
         console.log(`I'm sorry, I cannot sell you ${conesBought}; I only have ${totalCones} left.`);
-
+        totalCones = 0;
+        console.log(`Yay! I sold all the cones.`);
     }
 
 } while (totalCones > 0);
-console.log(`Yay! I sold all the cones.`);
+
 
 
 
