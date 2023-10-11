@@ -80,3 +80,4 @@ console.log(pyramid);
 //     }
 //     console.log(`The current index is ${i}`);
 // }
+console.log("hello")
