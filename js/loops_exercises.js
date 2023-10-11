@@ -40,6 +40,13 @@
 // 199 is odd
 // ...
 
+/* alternate random number generator:
+const randomNum = (min, max) => {
+    return parseInt(Math.random() * (max - min) + min);
+    }
+
+    soooo example.....const randomNumber = randomNum(20, 200);
+ */
 // const tenRandomNumbers = () => {
 //     for (let i = 1; i <= 10; i++) {
 //         const randomNum = Math.floor(Math.random() * (200 - 20) + 20);
@@ -78,6 +85,17 @@ for(i = 1; i <= 9; i++) {
     console.log(row); //I want the number to repeat itself by it's number
 }
 
+/* alternatively....
+
+const numberPyramid = (num) => {
+    for(i = 1; i <= num; i++) {
+        const message = i.toString().repeat(i); //or const message = i + "".repeat(i); bc .repeat is only a string method
+        console.log(`message`);
+
+numberPyramid(9);
+
+ */
+
 
 // Create a for loop that uses console.log to create the output shown below.
 // 100
@@ -101,7 +119,14 @@ for(i = 1; i <= 9; i++) {
 // 10
 // 5
 // Break and Continue
-//
+
+const countDownBy5 = (num) => {
+    for(let i = num; i > 0; i-=5) {
+        console.log(i);
+    }
+}
+
+
 // Create a file named break_and_continue.js in the js directory.
 //     Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input.
 //     Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
@@ -158,20 +183,25 @@ for(i = 1; i <= 9; i++) {
 //
 // An ice cream seller can't go home until she sells all of her cones. First write enough code that generates a random number between 50 and 100 representing the amount of cones to sell before you start your loop. Inside of the loop your code should generate another random number between 1 and 5, simulating the amount of cones being bought by her clients. Use a do-while loop to log to the console the amount of cones sold to each person. The below code shows how to get the random numbers for this exercise.
 
-//let allCones = Math.floor(Math.random() * (100 - 50) + 50);
-let allCones = 10;
-
+let totalCones = Math.floor(Math.random() * 50) + 50;
+console.log(`I have ${totalCones} to sell today.`);
 do {
-    let conesBought = Math.floor(Math.random() * 5);
+    let conesBought = Math.floor(Math.random() * 5) + 1;
     conesBought++;
-    console.log(`${conesBought} cones sold...`);
+    console.log(`The customer is purchasing ${conesBought} cones.`);
+    totalCones = totalCones - conesBought;
 
-} while ((conesBought - allCones) > 50);
-console.log(`I'm sorry, I cannot sell you ${conesBought}; I only have ${allCones} left.`);
+    if (totalCones > conesBought) {
+        let whatCustomerIsTryingToBuy = `${totalCones} cones left...`
+        console.log(whatCustomerIsTryingToBuy);
 
-while (allCones = 100);
+    } else if(totalCones > conesBought) {
+        console.log(`I'm sorry, I cannot sell you ${conesBought}; I only have ${totalCones} left.`);
+
+    }
+
+} while (totalCones > 0);
 console.log(`Yay! I sold all the cones.`);
-
 
 
 
