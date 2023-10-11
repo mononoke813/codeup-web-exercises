@@ -50,31 +50,33 @@ do {
 //     myNumber++;
 // } while( myNumber <= 10);
 
-// const buildRow = (num) => {
-//     let result = "";
-//     for(let i = 0; i < num; i++) {
-//         result += "*";
-//     }
-//     result = "\n";
-//     return result;
-// };
-//
-// const buildPyramid = (rows) => {
-//     let result = "";
-//     //first for loop
-//         for (let i = 1; i <= rows; i++) {
-//             result += buildRow(i);
-//             //result += "*".repeat(i);
-//         }
-//     return result;
-// };
-//
-// let pyramid = buildPyramid(5);
-// console.log(pyramid);
 
-for (let i = 0; i <= 10; i++) {
-    if(i === 5) {
-        continue; //skips the iteration while 'break' will end it
+
+const buildRow = (num) => {
+    let result = "";
+    for(let i = 0; i < num; i++) {
+        result += "*";
     }
-    console.log(`The current index is ${i}`);
-}
+    result += "\n"; //the += is needed otherwise it will just return empty space, not * pyramid
+    return result;
+};
+
+const buildPyramid = (rows) => {
+    let result = "";
+    //first for loop
+        for (let i = 1; i <= rows; i++) {
+            result += buildRow(i);
+            //result += "*".repeat(i);
+        }
+    return result;
+};
+
+let pyramid = buildPyramid(10);
+console.log(pyramid);
+
+// for (let i = 0; i <= 10; i++) {
+//     if(i === 5) {
+//         continue; //skips the iteration while 'break' will end it
+//     }
+//     console.log(`The current index is ${i}`);
+// }
