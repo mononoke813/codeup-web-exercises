@@ -31,22 +31,27 @@
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-    for(let i = 0; i < names.length; i++) { //the code only worked once I listed names.length
+    for(let i = 0; i < numberOfNames; i++) { //the code only worked once I listed names.length
         const namePlacement = [i];
         const listAllNames = names[i];
         console.log(`The name at index ${namePlacement} is: ${listAllNames}.`);
     }
 
+    /* FOR...OF loop alternate form
+    for (let name of names) {
+        console.log(name);
+        }
+     */
+
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-
+    //names.forEach(element, index, array) => { });
     names.forEach((name, index) => {
         console.log(`This is their name: ${name} at index ${index}.`)
 
     });
-
 
     /**
      * TODO:
@@ -65,20 +70,20 @@
         //i want a listed array where it returns just the first item in the array
         return array[0];
     }
-    const first = firstArrayItem(names);
+    const first = firstArrayItem(["dog", "cat", "fish", "bird", "reptile"]);
     console.log(first);
 
 
     const secondArrayItem = (array) => {
         return array[1];
     }
-        const second = secondArrayItem(names);
+        const second = secondArrayItem(["dog", "cat", "fish", "bird", "reptile"]);
         console.log(second);
 
     const lastArrayItem = (array) => {
         return array[array.length - 1];
     }
-        const last = lastArrayItem(names);
+        const last = lastArrayItem(["dog", "cat", "fish", "bird", "reptile"]);
         console.log(last);
 
 
