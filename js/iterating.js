@@ -63,29 +63,23 @@
      */
     const firstArrayItem = (array) => {
         //i want a listed array where it returns just the first item in the array
-        if(array.length > 0) {
-            return array[0];
-        }
-        const first = firstArrayItem();
-        console.log(first);
+        return array[0];
     }
+    const first = firstArrayItem(names);
+    console.log(first);
+
 
     const secondArrayItem = (array) => {
-        if(array.length > 0) {
-            return array[1];
-        }
-
-        const second = secondArrayItem();
+        return array[1];
+    }
+        const second = secondArrayItem(names);
         console.log(second);
+
+    const lastArrayItem = (array) => {
+        return array[array.length - 1];
     }
-
-    const lastArrayItem = () => {
-        if(array.length > 0) {
-            return array[array.length - 1];
-        }
-
-        const last = lastArrayItem();
+        const last = lastArrayItem(names);
         console.log(last);
-    }
+
 
 })();
