@@ -6,7 +6,7 @@ let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oc
 
 // todo:
 // Create the date corresponding to your birthday using the JavaScript Date object.
-let jsBirthday = new Date(1986, 10, 11)
+let jsBirthday = new Date(1986, 10, 11, 8, 30)
 
 
 // todo:
