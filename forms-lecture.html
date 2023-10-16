@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Forms Lecture</title>
+</head>
+
+<body> <!-- GET METHOD SENDS YOUR DATA WITH YOU IN ADDRESS BAR -->
+	<h1>Register for Website</h1>
+	 <form method="GET" action=""> <!-- the action is meant to go to another page, here it will show up in url -->
+       <label for="username">
+		   <span>Username</span>
+		<input type="text" name="username" placeholder="Username"> <!-- placeholder only adds in explanatory text in the text box -->
+	   </label>
+		 <br>
+		<label for="password">
+			<span>Password</span>
+
+       <input type="password" name="password" placeholder="Password"> <!-- when inputting password, using text will show the password; need to use password -->
+       <!-- <input type="submit" value="Go"> is the old school way -->
+		</label> <!-- ** WRAP LABELS AROUND INPUTS ** -->
+
+		 <section>
+			 <h2>What kind of pizza do you like?</h2>
+			 	<label>
+					<input type="checkbox" name="pizza_toppings" value="pepperoni">
+					<span>Pepperoni</span>
+				</label>
+			 <br>
+			 <label>
+				 <input type="checkbox" name="pizza_toppings" value="cheese">
+				 <span>Cheese</span>
+			 </label>
+			 <br>
+			 <label>
+				 <input type="checkbox" name="pizza_toppings" value="hawaiian">
+				 <span>Hawaiian</span>
+			 </label>
+			 <br>
+			 <h2>What is your role?</h2>
+			 <label>
+				 <input type="radio" name="role" value="designer">
+				 <span>Designer</span>
+			 </label>
+			 <br>
+			 <label>
+				 <input type="radio" name="role" value="developer">
+				 <span>Developer</span>
+			 </label>
+			 <br>
+			 <label>
+				 <input type="radio" name="role" value="project_manager">
+				 <span>Project Manager</span>
+			 </label>
+
+
+
+
+		 </section>
+       <button>Go</button>
+	 </form>
+</body>
+
+</html>
