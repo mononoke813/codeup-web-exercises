@@ -8,27 +8,29 @@
 <body> <!-- POST METHOD SENDS YOUR DATA TO ANOTHER LOCATION -->
 <h1>Register for Website</h1>
 <form method="POST" action="https://request-inspector.glitch.me/"> <!-- the action will go to another page in POST -->
+  <fieldset>
   <label for="username">
     <span>Username</span>
-    <input type="text" name="username" placeholder="Username"> <!-- placeholder only adds in explanatory text in the text box -->
+    <input type="text" name="username" placeholder="Username" required> <!--  adding required forces user to add an input -->
   </label>
   <br>
   <label for="password">
     <span>Password</span>
-
-    <input type="password" name="password" placeholder="Password"> <!-- when inputting password, using text will show the password; need to use password -->
-    <!-- <input type="submit" value="Go"> is the old school way -->
+    <input type="password" name="password" placeholder="Password" required>
   </label> <!-- ** WRAP LABELS AROUND INPUTS ** -->
+  </fieldset>
 
+  <fieldset>
+    <legend>What kind of pizza do you like?</legend>
   <section>
-    <h2>What kind of pizza do you like?</h2>
+
     <label>
-      <input type="checkbox" name="pizza_toppings" value="pepperoni">
+      <input type="checkbox" name="pizza_toppings" value="pepperoni" >
       <span>Pepperoni</span>
     </label>
     <br>
     <label>
-      <input type="checkbox" name="pizza_toppings" value="cheese">
+      <input type="checkbox" name="pizza_toppings" value="cheese" disabled>  <!-- removes ability to interact -->
       <span>Cheese</span>
     </label>
     <br>
@@ -36,11 +38,14 @@
       <input type="checkbox" name="pizza_toppings" value="hawaiian">
       <span>Hawaiian</span>
     </label>
+  </section>
+    </fieldset>
+
     <br>
     <h2>What is your role?</h2>
     <label>
-      <input type="radio" name="role" value="designer">
-      <span>Designer</span>
+      <input type="radio" name="role" value="designer" required> <!-- required makes this a must answer for radio checkboxes only -->
+       <span>Designer</span>
     </label>
     <br>
     <label>
@@ -52,11 +57,22 @@
       <input type="radio" name="role" value="project_manager">
       <span>Project Manager</span>
     </label>
+    </section>
+  <h2>Favorite Wing Joint</h2>
+
+    <select name="fav_wing_joint">
+
+      <option value="bw2">Buffalo Wild Wings</option>
+      <option value="daddy">Wing Daddy's</option>
+      <option value="stop">Wing Stop</option>
+      <option value="plucky">Pluckers</option>
+      <option value="navy">Anchor Bar</option>
+
+    </select>
 
 
 
 
-  </section>
   <button>Go</button>
 </form>
 </body>

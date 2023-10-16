@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+<body>
+<h1>Register With Us</h1>
+<form method="POST" action="https://request-inspector.glitch.me/">
+    <fieldset>
+        <legend>Register Here</legend>
+        <label>
+            <span>Email</span>
+            <input type="text" name="email" placeholder="Enter your email" required>
+        </label>
+        <br>
+        <label>
+            <span>Password</span>
+            <input type="password" name="password" placeholder="Enter your password" required>
+        </label>
+    </fieldset>
+    <br>
+    <textarea name="Bio"></textarea>
+    <br>
+
+    <h2>How did you hear about us?</h2>
+    <label>
+        <input type="checkbox" name="marketing_option" value="billboard">
+        <!-- What happens if the inputs are given different name attributes? They are treated as separate choice options grouped by their name -->
+        <span>Billboard</span>
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="marketing_option" value="radio_advertisement">
+        <span>Radio Advertisement</span>
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="marketing_option" value="internet_advertisement">
+        <span>Internet Advertisement</span>
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="marketing_option" value="other">
+        <span>Other</span>
+    </label>
+
+    <br>
+
+    <h2>Which web browser are you using?</h2>
+    <label>
+        <select name="web_browser">
+            <option value="net_exp">Internet Explorer</option>
+            <option value="saf">Safari</option>
+            <option value="fox">Firefox</option>
+            <option value="chro">Google Chrome</option>
+            <option value="zilla">Mozilla</option>
+        </select>
+    </label>
+
+    <br>
+    <button>Submit</button>
+</form>
+
+</body>
+</html>
