@@ -2,62 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Forms</title>
+    <title>Register With Us</title>
 </head>
 <body>
 <h1>Register With Us</h1>
 <form method="POST" action="https://request-inspector.glitch.me/">
     <fieldset>
         <legend>Register Here</legend>
-        <label>
+        <label for="email">
             <span>Email</span>
-            <input type="text" name="email" placeholder="Enter your email" required>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
         </label>
         <br>
-        <label>
+        <label for="password">
             <span>Password</span>
-            <input type="password" name="password" placeholder="Enter your password" required>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
         </label>
     </fieldset>
     <br>
-    <textarea name="Bio"></textarea>
-    <br>
-
-    <h2>How did you hear about us?</h2>
-    <label>
-        <input type="checkbox" name="marketing_option" value="billboard">
-        <!-- What happens if the inputs are given different name attributes? They are treated as separate choice options grouped by their name -->
-        <span>Billboard</span>
-    </label>
-    <br>
-    <label>
-        <input type="checkbox" name="marketing_option" value="radio_advertisement">
-        <span>Radio Advertisement</span>
-    </label>
-    <br>
-    <label>
-        <input type="checkbox" name="marketing_option" value="internet_advertisement">
-        <span>Internet Advertisement</span>
-    </label>
-    <br>
-    <label>
-        <input type="checkbox" name="marketing_option" value="other">
-        <span>Other</span>
+    <label for="bio">
+        <span>Bio</span>
+        <br>
+        <textarea id="bio" name="bio"
+                  placeholder="Please start from the day you were born and go from there until now..."
+                  required></textarea>
     </label>
 
     <br>
-
-    <h2>Which web browser are you using?</h2>
-    <label>
-        <select name="web_browser">
-            <option value="net_exp">Internet Explorer</option>
-            <option value="saf">Safari</option>
-            <option value="fox">Firefox</option>
-            <option value="chro">Google Chrome</option>
-            <option value="zilla">Mozilla</option>
-        </select>
-    </label>
-
+    <section>
+        <h2>How did you hear about us?</h2>
+        <label for="billboard">
+            <input type="checkbox" id="billboard" name="marketing_option" value="billboard">
+            <!-- What happens if the inputs are given different name attributes? They are treated as separate choice options grouped by their name -->
+            <span>Billboard</span>
+        </label>
+        <br>
+        <label for="radio_ad">
+            <input type="checkbox" id="radio_ad" name="marketing_option" value="radio_advertisement">
+            <span>Radio Advertisement</span>
+        </label>
+        <br>
+        <label for="internet_ad">
+            <input type="checkbox" id="internet_ad" name="marketing_option" value="internet_advertisement">
+            <span>Internet Advertisement</span>
+        </label>
+        <br>
+        <label for="other">
+            <input type="checkbox" id="other" name="marketing_option" value="other">
+            <span>Other</span>
+        </label>
+    </section>
+    <br>
+    <section>
+        <h2>Which web browser are you using?</h2>
+        <label> <!-- dropdown menu = select -->
+            <select name="web_browser" id="web_browser">
+                <option value="internet_explorer">Internet Explorer</option>
+                <option value="safari">Safari</option>
+                <option value="firefox">Firefox</option>
+                <option value="google_chrome">Google Chrome</option>
+                <option value="mozilla">Mozilla</option>
+            </select>
+        </label>
+    </section>
     <br>
     <button>Submit</button>
 </form>
