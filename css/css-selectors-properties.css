@@ -1,3 +1,12 @@
+/* css variables */
+:root {
+    --clr-primary: #4E5D33;
+    --clr-secondary: #FFC10C;
+    --clr-secondary-light: #FFD46C;
+    --border-radius: 10px;
+}
+
+
 /* three basic selectors */
 
 /* target EVERYTHING (careful)*/
@@ -28,10 +37,19 @@ a {
     align-items: center;
 }
 
+header.container {
+    justify-content: center;
+}
+
+header.container .row {
+    justify-content: center;
+}
+
 .rows {
     display: flex;
     width: 100%;
     max-width: 1100px;
+    background-color: transparent;
 }
 
 .column {
@@ -45,3 +63,46 @@ a {
     border-bottom: 1px solid #e5e5e5;
 }
 
+
+header img {
+    width: 150px;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    font-weight: 600;
+}
+
+nav > ul > li {
+    padding: 10px 20px 10px 20px;
+}
+
+nav > ul > li > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.container.hero {
+    min-height: 100dvh;
+    background-color: green;
+    background-image: url("../img/pexels-karim-tab-18624392.jpeg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.btn {
+    background-color: var(--clr-secondary);
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: background-color ease 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--clr-secondary-light);
+}
