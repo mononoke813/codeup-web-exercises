@@ -1,0 +1,23 @@
+body {
+    font-family: serif;
+}
+
+
+input {
+    min-height: 40px;
+    border-radius: 8px;
+    border: 1px solid darkgrey:
+    padding-left: 20px;
+    font-family: inherit;
+    color: red;
+}
+
+input::placeholder {
+    color: #eee;
+    font-family: inherit;
+
+}
+
+input:focus {
+    border-color: red;
+}
