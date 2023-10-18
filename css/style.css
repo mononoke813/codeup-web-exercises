@@ -6,6 +6,11 @@ body {
     font-size: 20pt;
 }
 
+header p {
+    font-size: 70pt;
+    font-weight: 700;
+}
+
 #page {
     background-color: lightgrey;
     background-image: url(../img/pexels-laura-james-6101969.jpg);
@@ -17,6 +22,7 @@ a {
     color: orange;
     transition: all ease 1s;
 }
+
 
 .fancy-header {
     color: purple; /* single line comment */
@@ -33,7 +39,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 li {
-    list-style: armenian;
+    list-style: none;
+    text-align: center;
 }
 
 table {
@@ -42,6 +49,8 @@ table {
     border-radius: 25px;
     text-align: center;
     padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .top-row {
@@ -50,7 +59,9 @@ table {
 }
 
 img {
-    padding: 50px;
+    border-color: chocolate;
+    border-width: 10px;
+    border-style: ridge;
 }
 
 th {
@@ -69,3 +80,13 @@ td {
     font-size: 14pt;
     padding: 30px;
 }
+
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: black;
+}
+
