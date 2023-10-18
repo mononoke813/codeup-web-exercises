@@ -17,11 +17,11 @@
 
     //POP
     daysOfTheWeek.pop();
-    console.log(`Popping to REMOVE Saturday from the END of the list: ${daysOfTheWeek}`);
+    console.log(`Popping to REMOVE the last item in the array from the END of the list: ${daysOfTheWeek}`);
 
     //SHIFT
     daysOfTheWeek.shift();
-    console.log(`Shifting to REMOVE Sunday from the START of the list: ${daysOfTheWeek}`);
+    console.log(`Shifting to REMOVE the first item in the array from the START of the list: ${daysOfTheWeek}`);
 
     //LOCATING ELEMENTS IN ARRAY
     const colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink", "red"];
@@ -31,15 +31,15 @@
     //if it doesn't find it
     const magentaIndex = colors.indexOf("magenta");
     console.log("Magenta index => ", magentaIndex);
-        if(magentaIndex >= 0) {
-            console.log("Found magenta!");
-        } else {
-            console.log("No magenta found.");
-        }
+    if (magentaIndex >= 0) {
+        console.log("Found magenta!");
+    } else {
+        console.log("No magenta found.");
+    }
 
     //start at beginning
     const redIndexStart = colors.indexOf("red");
-        console.log("Red index start =>", redIndexStart);
+    console.log("Red index start =>", redIndexStart);
 
     //start at end
     const redIndexLast = colors.lastIndexOf("red");
@@ -52,7 +52,7 @@
     // console.log(allRedValues);
 
     //SLICING
-    const lastTwoColors = colors.slice(colors.length -2, colors.length);
+    const lastTwoColors = colors.slice(colors.length - 2, colors.length);
     console.log(lastTwoColors);
 
     //REVERSING
@@ -76,10 +76,9 @@
 
 
     //EXTRA EXAMPLE
-let url = "https://codeup.edu/";
-let domain = url.split("/")[2]; //the [2] is used from the array it makes to pull the precise item that is wanted
-console.log(domain);
-
+    let url = "https://codeup.edu/";
+    let domain = url.split("/")[2]; //the [2] is used from the array it makes to pull the precise item that is wanted
+    console.log(domain);
 
 
 })();
