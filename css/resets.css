@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    line-height: 1.5;
+
+}
+
+a {
+    color: inherit;
+    text-decoration: unset;
+}
+
+ul {
+    list-style: none;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* this file will be @import "resets.css" into the .css you're working on to have a baseline to build off of */
+
+
+
+
+
+
+
+
+
