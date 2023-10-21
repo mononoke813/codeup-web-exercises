@@ -1,0 +1,25 @@
+@import "mastering-flexbox-base.css";
+
+/* This is the file we will use to experiment with flexbox */
+.container {
+    display: flex;
+    height: 80dvh;
+    align-items: start; /* cross axis */
+    justify-content: start; /* main axis */
+    /* which direction is the main axis going? is it x or y axis? how the kids align determines this */
+    /*flex-direction: column; /* here adjusts the main axis from x axis to y axis */
+    flex-wrap: wrap;
+    gap: 10px; /* puts spacing equally between children; as determined by the parent */
+}
+
+.item {
+    /*flex-grow: 0; !* is a ratio and 0 = no growing; 1 = takes up remaining space in parent along main axis along with other siblings - shared equally *!*/
+    /*flex-shrink: 0;*/
+    /*flex-basis: auto; !* this is where you start from in the behavior pattern *!*/
+    flex: 0 0 auto;
+}
+
+#item-3 {
+    flex-grow: 1;
+    align-self: stretch;
+}
