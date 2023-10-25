@@ -1,0 +1,78 @@
+@import "layout.css";
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    line-height: 1;
+    font-family: 'Sometype Mono', monospace;
+}
+
+p {
+    font-size: 10pt;
+}
+
+.row {
+    max-width: 100%;
+}
+
+.page-wrapper {
+    padding: 50px 150px;
+}
+
+li {
+    text-decoration: underline;
+    color: blue;
+}
+
+.top-page {
+    display: none;
+}
+
+@media screen and (max-width: 750px) {
+
+    .container .row {
+        flex-direction: column;
+
+    }
+
+    .container .row.headerRow {
+        display: unset;
+    }
+
+    .top-page {
+        font-size: 10pt;
+        padding: 10px;
+        margin: 0px 10px 0px 10px;
+        background: #C8FFFF;
+        border-radius: 3px;
+        border: solid lightgrey;
+        display: block;
+        text-align: center;
+    }
+
+    li {
+        background: lightgrey;
+        padding: 10px 100px;
+        border-radius: 3px;
+        text-align: center;
+    }
+
+    h1 {
+        align-self: center;
+        padding: 10px;
+    }
+
+    .nav-links {
+        align-self: center;
+        flex-direction: column;
+
+    }
+
+    .container .column {
+        align-self: center;
+    }
+
+    .container .p {
+        text-align: start;
+    }
+
+}
