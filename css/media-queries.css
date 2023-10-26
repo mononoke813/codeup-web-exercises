@@ -23,21 +23,32 @@ li {
     color: blue;
 }
 
+a {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: stretch;
+}
+
 .top-page {
     display: none;
 }
 
 @media screen and (max-width: 750px) {
 
+    .page-wrapper {
+        padding: 5px;
+    }
+
     .container .row {
         flex-direction: column;
+        padding: 10px;
 
     }
 
-    .container .row.headerRow {
-        display: unset;
-    }
-
+    /*.container .row.headerRow {*/
+    /*    display: unset;*/
+    /*}  changed the top most button to full screen */
     .top-page {
         font-size: 10pt;
         padding: 10px;
@@ -56,19 +67,24 @@ li {
         text-align: center;
     }
 
+    a {
+        display: flex;
+        align-items: stretch;
+    }
+
     h1 {
         align-self: center;
         padding: 10px;
     }
 
     .nav-links {
-        align-self: center;
         flex-direction: column;
-
+        
     }
 
     .container .column {
         align-self: center;
+        align-items: stretch;
     }
 
     .container .p {
