@@ -6,6 +6,11 @@
     min-height: 100dvh;
 }
 
+.container {
+    border-bottom: 5px solid darkgreen;
+    padding-bottom: 15px;
+}
+
 .job-title {
     padding-bottom: 20px;
 }
@@ -26,11 +31,6 @@ h4 {
 p {
     text-align: center;
 }
-
-hr {
-    border: 5px solid green;
-}
-
 
 .body-text p {
     text-align: left;
