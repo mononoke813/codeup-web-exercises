@@ -1,0 +1,20 @@
+/* if you cannot find the class in bootstrap, THEN create your own custom class */
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.container#test .row {
+    min-height: 300px;
+    background-color: peachpuff;
+}
+
+.container#test .col {
+    border: 1px solid red;
+}
+
+.col {
+    border: 3px solid red;
+}
