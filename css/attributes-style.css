@@ -49,3 +49,7 @@
     background-color: black;
     color: whitesmoke;
 }
+
+/*img[alt="Profile Picture"] {*/
+/*    THIS IS AN ALTERNATE WAY TO TARGET THE PICTURE*/
+/*}*/
