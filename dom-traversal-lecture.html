@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100dvh;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            border-radius: 8px;
+
+            &.active {
+                background-color: rgb(247, 0, 255);
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="page-wrapper justify-content-center">
+    <div class="container d-flex flex-column gap-5" data-slider="hero-slider">
+        <div class="row justify-content-center gap-3">
+            <div class="box active" data-slide></div>
+            <div class="box" data-slide></div>
+            <div class="box" data-slide></div>
+            <div class="box" data-slide></div>
+            <div class="box" data-slide></div>
+            <div class="box" data-slide></div>
+            <div class="box" data-slide></div>
+            <div class="box" data-slide></div>
+            <div class="box" data-slide></div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col flex-grow-0 flex-shrink-1">
+                <button id="highlightPrev" class="btn btn-primary text-nowrap" data-prev="hero-slider">Hightlight
+                    Previous
+                </button>
+            </div>
+            <div class="col flex-grow-0 flex-shrink-1">
+                <button id="highlightNext" class="btn btn-primary text-nowrap" data-next="hero-slider">Hightlight Next
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <div class="container d-flex flex-column gap-5" data-slider="service-slider">
+        <div class="row justify-content-center gap-3">
+            <div class="box active" data-slide></div>
+            <div class="box" data-slide></div>
+            <div class="box" data-slide></div>
+            <div class="box" data-slide></div>
+            <div class="box" data-slide></div>
+            <div class="box" data-slide></div>
+            <div class="box" data-slide></div>
+            <div class="box" data-slide></div>
+            <div class="box" data-slide></div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col flex-grow-0 flex-shrink-1">
+                <button id="highlightPrev" class="btn btn-primary text-nowrap" data-prev="service-slider">Hightlight
+                    Previous
+                </button>
+            </div>
+            <div class="col flex-grow-0 flex-shrink-1">
+                <button id="highlightNext" class="btn btn-primary text-nowrap" data-next="service-slider">Hightlight
+                    Next
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="./js/dom-traversal-lecture.js"></script>
+</body>
+
+</html>
