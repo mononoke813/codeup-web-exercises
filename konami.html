@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script>
+    "use strict";
+
+    document.addEventListener("keyup", event => console.log(event.key));
+
+    const konamiSeq = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "Shift", "B", "A", "Enter"]; // for .addEventListener("keydown"...
+
+    // const konamiSeq = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "B", "A", "Shift", "Enter"]; // for .addEventListener("keyup"...
+    
+    const userKonami = [];
+    let currentIndex = 0;
+
+    document.addEventListener("keyup", event => {
+        const key = event.key;
+
+        if (key === konamiSeq[currentIndex]) {
+            userKonami.push(key);
+            currentIndex++;
+
+            if (currentIndex === konamiSeq.length) {
+                alert("Konami Code Entered!");
+                // You can perform a specific action here when the Konami Code is entered.
+                currentIndex = 0;
+                userKonami.length = 0; // Clear the user's input
+            }
+        } else {
+            // Reset if the key doesn't match the current sequence
+            currentIndex = 0;
+            userKonami.length = 0; // Clear the user's input
+        }
+    });
+
+</script>
+</body>
+</html>
