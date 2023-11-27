@@ -1,24 +1,21 @@
-// fetch("https://api.github.com/users/mononoke813", {headers: {'Authorization': 'ghp_cfUkXrcEwVrHrUZFxvOBfvXnV410CH0c1KvA'}}).then((response) => response.json())
-//     .then((data) => {
-//         console.log(data);
-//     })
+import {keys} from "./keys.js";
+
 // MAIN
 
 (async () => {
     const getGithubUsername = async (username) => {
         // build a fetch
-        const url = `https://api.github.com/users/${username}`;
+        const url = `https://api.github.com/users/${username}/events`;
         const options = {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
+                "Authorization": `Bearer ${keys.github}`
             },
         };
         try {
             const response = await fetch(url, options);
             let list = await response.json();
-
-
             return list.updated_at;
             console.log(list.updated_at);
         } catch (error) {
@@ -27,4 +24,6 @@
     };
     console.log(getGithubUsername("mononoke813"));
 
+
 })();
+
