@@ -24,6 +24,12 @@ const favJoints = [
     }
 ]
 
+/**
+ *
+ * @param containerElem - the HTML id where you want the map to populate
+ * @param coordinates - an array of coordinates
+ * @returns {fn.Map|fn.Map}
+ */
 const createMap = (containerElem, coordinates) => {
     const map = new mapboxgl.Map({
         container: 'map',
@@ -63,7 +69,6 @@ const getAddress = async (lng, lat) => {
     const data = await response.json();
     return data.features[0].place_name;
 };
-
 
 const createMarker = (map, coordinates, popupHTML) => {
     const popup = new mapboxgl.Popup().setHTML(popupHTML);
