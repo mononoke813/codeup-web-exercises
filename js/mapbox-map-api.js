@@ -3,23 +3,23 @@ import {keys} from "./keys.js";
 const favJoints = [
     {
         name: "Broadway Daily Bread",
-        location:
+        location: "5011 De Zavala Rd, San Antonio, TX 78249",
         dish: "Peppered Turkey on Birdman bread",
-        image: "./img/broadway_signature_sandwich.jpg",
+        image: "img/broadway_signature_sandwich.jpg",
         facts: "Fresh baked goods made daily from scratch with fresh ingredients; serving breakfast, lunch, and bakery items",
     },
     {
         name: "Niki's Tokyo Inn",
-        location:
+        location: "819 W Hildebrand Ave, San Antonio, TX 78212",
         dish: "ANYTHING",
-        image: "./img/sushi-sampler.jpg",
+        image: "img/sushi-sampler.jpg",
         facts: "Family-run restaurant serving traditional sushi and not an Americanized roll in sight; sit American-style or Japanese-style or at the Sushi Bar",
     },
     {
         name: "La Marginal",
-        location:
+        location: "2447 Nacogdoches Road, San Antonio, TX 78217",
         dish: "Churrasco Puertorriqueno",
-        image: "./img/churrasco1.jpg",
+        image: "img/churrasco1.jpg",
         facts: "Authentic Puerto Rican cuisine; if unsure what to get, try the lunch buffet for a little bit of everything!",
     }
 ]
@@ -73,14 +73,19 @@ const createMarker = (map, coordinates, popupHTML) => {
 
 //MAIN
 (async () => {
-    const coordinates = await getCoordinates("5011 De Zavala Road, San Antonio");
+    const coordinates = await getCoordinates("5011 De Zavala Rd, San Antonio, TX 78249");
     mapboxgl.accessToken = keys.mapbox;
     const map = createMap("map", coordinates);
-    createMarker(map, coordinates, "<p> ${favJoint.name}</p><p>${favJoint.image}</p>");
+    //createMarker(map, coordinates, `<p></p><p></p>`);
+    for (let favJoint of favJoints) {
+        const coordinates = await getCoordinates(favJoint.location);
+        const marker = new mapboxgl.Marker().setLngLat(coordinates).addTo(map);
+        const popup = new mapboxgl.Popup({offset: 25}).setHTML(`
+            <h3>${favJoint.name}</h3>
+            <p>${favJoint.dish}{favJoint.image}</p>
+            <p>${favJoint.facts}</p>
+        `);
+        marker.setPopup(popup);
+    }
 
-
-    favJoints.forEach(joint => {
-        const marker =
-        const popup =
-    });
 })();
