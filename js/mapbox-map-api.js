@@ -30,11 +30,11 @@ const favJoints = [
  * @param coordinates - an array of coordinates
  * @returns {fn.Map|fn.Map}
  */
-const createMap = (containerElem, coordinates) => {
+const createMap = ("map", coordinates) => {
     const map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/navigation-night-v1',
-        center: coordinates,
+        container: "map",
+        style: "mapbox://styles/mapbox/navigation-night-v1",
+        center: [-98.4895, 29.4268],
         zoom: 8,
     });
     return map;
@@ -53,22 +53,22 @@ const getCoordinates = async (searchText) => {
     const data = await response.json();
     return data.features[0].center;
 };
-const getAddress = async (lng, lat) => {
-    if (Array.isArray(lng)) {
-        lat = lng[1];
-        lng = lng[0];
-    }
-    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?access_token=${keys.mapbox}`;
-    const options = {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-        },
-    };
-    const response = await fetch(url, options);
-    const data = await response.json();
-    return data.features[0].place_name;
-};
+// const getAddress = async (lng, lat) => {
+//     if (Array.isArray(lng)) {
+//         lat = lng[1];
+//         lng = lng[0];
+//     }
+//     const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?access_token=${keys.mapbox}`;
+//     const options = {
+//         method: "GET",
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//     };
+//     const response = await fetch(url, options);
+//     const data = await response.json();
+//     return data.features[0].place_name;
+// };
 
 const createMarker = (map, coordinates, popupHTML) => {
     const popup = new mapboxgl.Popup().setHTML(popupHTML);

@@ -14,6 +14,10 @@ body {
     font-size: 11px;
 }
 
+img {
+    height: 70%;
+
+}
 .component-weather-box {
     margin: 30px auto;
     width: 420px;
@@ -138,3 +142,4 @@ h1 {
 small {
     font-size: 12px;
 }
+

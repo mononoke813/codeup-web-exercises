@@ -9,6 +9,11 @@ export const createMap = (containerElem, coordinates) => {
         center: coordinates,
         zoom: 8,
     });
+    map.flyTo({
+        center: coordinates,
+        zoom: 8,
+        speed: 2,
+    });
     return map;
 };
 
