@@ -79,16 +79,14 @@ const createMarker = (map, coordinates, popupHTML) => {
 //MAIN
 (async () => {
     const coordinates = await getCoordinates("5011 De Zavala Rd, San Antonio, TX 78249");
-    mapboxgl.accessToken = keys.mapbox;
     const map = createMap("map", coordinates);
-    //createMarker(map, coordinates, `<p></p><p></p>`);
+    createMarker(map, coordinates, `<p></p><p></p>`);
     for (let favJoint of favJoints) {
         const coordinates = await getCoordinates(favJoint.location);
         const marker = new mapboxgl.Marker().setLngLat(coordinates).addTo(map);
         const popup = new mapboxgl.Popup({offset: 25}).setHTML(`
             <h3>${favJoint.name}</h3>
-            <p>${favJoint.dish}{favJoint.image}</p>
-            <p>${favJoint.facts}</p>
+           
         `);
         marker.setPopup(popup);
     }

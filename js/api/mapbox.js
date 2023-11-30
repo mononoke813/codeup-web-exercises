@@ -1,6 +1,8 @@
 import {keys} from "../keys.js";
 
 export const createMap = (containerElem, coordinates) => {
+    // this access token required to populate map on browser
+    mapboxgl.accessToken = keys.mapbox;
     const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/navigation-night-v1',
